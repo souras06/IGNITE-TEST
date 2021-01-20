@@ -1,0 +1,1361 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE focus-model [
+]>
+<!--Party Role--><focus-model auxDataFilesFolder="" classifyAttributesEnabled="false" frea_ai_smart_comment="" inputOutput="false" manual="true">
+<model-identification modelTag="@Sourav_Testing @FIT_V.1 @Sourav_Testing_Testing @Party Role">
+<model-identification-field name="Application Name" partOfTag="true" value="Sourav_Testing"/>
+<model-identification-field name="Application code version #" partOfTag="true" value="FIT_V.1"/>
+<model-identification-field name="Application Function" partOfTag="true" value="Sourav_Testing_Testing"/>
+<model-identification-field name="Updated Reason" partOfTag="false" value="New Model"/>
+<model-identification-field name="Created By" partOfTag="false" value="ampratih@in.ibm.com"/>
+<model-identification-field name="Created Date and Time" partOfTag="false" value="24 Sep 2018 01:28:33"/>
+<model-identification-field name="Updated By" partOfTag="false" value="souras06@in.ibm.com"/>
+<model-identification-field name="Updated Date and Time" partOfTag="false" value="20 Jan 2021 13:24:28"/>
+<model-identification-field name="Application Sub Function" partOfTag="true" value="Party Role"/>
+<model-identification-field name="Test Stage" partOfTag="false" value=""/>
+<model-identification-field name="Criticality" partOfTag="false" value=""/>
+<model-identification-field name="Project" partOfTag="false" value=""/>
+<model-identification-field name="Epic" partOfTag="false" value=""/>
+<model-identification-field name="Feature" partOfTag="false" value=""/>
+<model-identification-field name="User Story" partOfTag="false" value=""/>
+<model-identification-field name="Use attribute pool" partOfTag="false" value="false"/>
+</model-identification>
+<attribute attr_class="NONE" dependencies="false" description="" group="" iotype="NEITHER" name="User_action" parentDetailsApplicationName="" parentDetailsFunctionality="" parentDetailsModel="" parentDetailsModelTag="@Sourav_Testing @FIT_V.1 @Sourav_Testing_Testing @Party Role" parentDetailsPortfolio="" parentDetailsTenantId="" parentDetailsUsername="" poolId="" revision="" type="STRING">
+<value description="create a new Party Role" name="create new" neg-value="false" weight="1"/>
+<value description="link newly created party role to a Fund setup" name="link new party to a Fund setup" neg-value="true" weight="1"/>
+<value description="link newly created party role to an Umbrella fund setup" name="link new party to an Umbrella fund setup" neg-value="true" weight="1"/>
+<value description="take a rejected party role and resubmit for approval" name="update and resubmit a rejected Party Role" neg-value="true" weight="1"/>
+<value description="pick a draft status Party role and proceed" name="saved draft" neg-value="true" weight="1"/>
+<value description="pick an approved status Party Role" name="approved" neg-value="true" weight="1"/>
+<requirement ID="1.2_UC_1_New Client Setup"/>
+<requirement ID="3.6_UC_1_New Client Setup"/>
+<requirement ID="3.8_UC_1_New Client Setup"/>
+</attribute>
+<attribute attr_class="NONE" dependencies="false" description="Modeling only UK vs Non UK as the application only has 2 paths but each country considred is added in the concrete values" group="" iotype="NEITHER" name="Jurisdiction" parentDetailsApplicationName="" parentDetailsFunctionality="" parentDetailsModel="" parentDetailsModelTag="@Sourav_Testing @FIT_V.1 @Sourav_Testing_Testing @Party Role" parentDetailsPortfolio="" parentDetailsTenantId="" parentDetailsUsername="" poolId="" revision="" type="STRING">
+<value name="UK" neg-value="false" weight="1"/>
+<value description="NOTE there are concrete values associated" name="Non UK" neg-value="false" weight="1"/>
+<requirement ID="1_UC_1_New Client Setup"/>
+</attribute>
+<attribute attr_class="NONE" dependencies="false" description="" group="" iotype="NEITHER" name="Search_criteria" parentDetailsApplicationName="" parentDetailsFunctionality="" parentDetailsModel="" parentDetailsModelTag="@Sourav_Testing @FIT_V.1 @Sourav_Testing_Testing @Party Role" parentDetailsPortfolio="" parentDetailsTenantId="" parentDetailsUsername="" poolId="" revision="" type="STRING">
+<value description="searches by Party ID" name="Party ID" neg-value="false" weight="1"/>
+<value description="searches by Party Name" name="Party Name" neg-value="false" weight="1"/>
+<value description="searches by Party Type" name="Party Type" neg-value="false" weight="1"/>
+<requirement ID="1.1_UC_1_New Client Setup"/>
+</attribute>
+<attribute attr_class="NONE" dependencies="false" description="" group="" iotype="NEITHER" name="Fund_Type" parentDetailsApplicationName="" parentDetailsFunctionality="" parentDetailsModel="" parentDetailsModelTag="@Sourav_Testing @FIT_V.1 @Sourav_Testing_Testing @Party Role" parentDetailsPortfolio="" parentDetailsTenantId="" parentDetailsUsername="" poolId="" revision="" type="STRING">
+<value description="at the Umbrella fund level" name="Umbrella Fund" neg-value="false" weight="1">
+<requirement ID="1.1_UC_1_New Client Setup"/>
+</value>
+<value description="at the Fund level" name="Fund" neg-value="false" weight="1">
+<requirement ID="1.1_UC_1_New Client Setup"/>
+</value>
+<value name="Product" neg-value="false" weight="1">
+<requirement ID="1_UC_7_TA-Onshore"/>
+</value>
+</attribute>
+<attribute attr_class="NONE" dependencies="false" description="" group="" iotype="NEITHER" name="service_lines" parentDetailsApplicationName="" parentDetailsFunctionality="" parentDetailsModel="" parentDetailsModelTag="@Sourav_Testing @FIT_V.1 @Sourav_Testing_Testing @Party Role" parentDetailsPortfolio="" parentDetailsTenantId="" parentDetailsUsername="" poolId="" revision="" type="STRING">
+<value name="TA  Onshore" neg-value="false" weight="1"/>
+<value name="TA &amp; FA" neg-value="false" weight="1"/>
+<value name="FA Onshore" neg-value="false" weight="1"/>
+<value name="TA - Offshore" neg-value="false" weight="1"/>
+<requirement ID="1.3_UC_1_New Client Setup"/>
+</attribute>
+<attribute attr_class="NONE" dependencies="false" description="" group="" iotype="NEITHER" name="Party_Type" parentDetailsApplicationName="" parentDetailsFunctionality="" parentDetailsModel="" parentDetailsModelTag="@Sourav_Testing @FIT_V.1 @Sourav_Testing_Testing @Party Role" parentDetailsPortfolio="" parentDetailsTenantId="" parentDetailsUsername="" poolId="" revision="" type="STRING">
+<value name="Parent Entity" neg-value="false" weight="1"/>
+<value name="Fund Custodian" neg-value="false" weight="1"/>
+<value name="Power of Attorney - Fund" neg-value="false" weight="1"/>
+<value name="Investment Manager" neg-value="false" weight="1"/>
+<value name="Promoter" neg-value="false" weight="1"/>
+<value name="Management Company" neg-value="false" weight="1"/>
+<value name="Regulatory Authority" neg-value="false" weight="1"/>
+<value name="Auditors" neg-value="false" weight="1"/>
+<value name="Legal Advisors" neg-value="false" weight="1"/>
+<value name="Tax Advisor - Filing/Advice" neg-value="false" weight="1"/>
+<value name="Board of Directors - Fund" neg-value="false" weight="1"/>
+<value name="Authorized Participant" neg-value="false" weight="1"/>
+<value description="UK TA" name="Trustee" neg-value="false" weight="1"/>
+<value description="UK TA" name="Depository" neg-value="false" weight="1"/>
+<value name="Fund Investment Advisor" neg-value="false" weight="1"/>
+<value name="Fund Sub-Advisor" neg-value="false" weight="1"/>
+<value name="Paying Agent" neg-value="false" weight="1"/>
+<value name="Fund Distributor" neg-value="false" weight="1"/>
+<value name="Transfer Agent" neg-value="false" weight="1"/>
+<value name="Fund Accountant" neg-value="false" weight="1"/>
+<value name="Sub TA" neg-value="false" weight="1"/>
+<value name="Corporate and Domiciliary Services" neg-value="false" weight="1"/>
+<value name="Admin Entity" neg-value="false" weight="1"/>
+<value name="Portfolio Manager" neg-value="false" weight="1"/>
+<value name="Default Advisor" neg-value="false" weight="1"/>
+<value name="Tax Authority" neg-value="false" weight="1"/>
+<value name="Sponsoring Entity" neg-value="false" weight="1"/>
+<value name="Broker/Counterparty" neg-value="false" weight="1"/>
+<value name="Product Administrator" neg-value="false" weight="1"/>
+<value name="Plan Manager" neg-value="false" weight="1"/>
+<value name="External Product Provider" neg-value="false" weight="1"/>
+<requirement ID="1.4_UC_1_New Client Setup"/>
+</attribute>
+<attribute attr_class="NONE" dependencies="false" description="" group="" iotype="NEITHER" name="Overridden" parentDetailsApplicationName="" parentDetailsFunctionality="" parentDetailsModel="" parentDetailsModelTag="@Sourav_Testing @FIT_V.1 @Sourav_Testing_Testing @Party Role" parentDetailsPortfolio="" parentDetailsTenantId="" parentDetailsUsername="" poolId="" revision="" type="STRING">
+<value description="User should be able to override this party information at the Fund level" name="yes" neg-value="false" weight="1"/>
+<value description="User should be able to override this party information at Fund level but not for TA" name="yes but no for TA" neg-value="false" weight="1"/>
+<value description="Fund level override should not apply to this party" name="N/A" neg-value="false" weight="1"/>
+<requirement ID="2.1_UC_1_New Client Setup"/>
+</attribute>
+<attribute attr_class="NONE" dependencies="false" description="" group="" iotype="NEITHER" name="Promoter_Type" parentDetailsApplicationName="" parentDetailsFunctionality="" parentDetailsModel="" parentDetailsModelTag="@Sourav_Testing @FIT_V.1 @Sourav_Testing_Testing @Party Role" parentDetailsPortfolio="" parentDetailsTenantId="" parentDetailsUsername="" poolId="" revision="" type="STRING">
+<value description="Specifically, a Management Company" name="Management Company" neg-value="false" weight="1"/>
+<value description="Specifically an Alternative Investment Fund Manager (AIFM)" name="Alternative Investment Fund Manager (AIFM)" neg-value="false" weight="1"/>
+<value name="NA" neg-value="false" weight="1"/>
+<requirement ID="2.1_UC_1_New Client Setup"/>
+</attribute>
+<attribute attr_class="NONE" dependencies="false" description="" group="" iotype="NEITHER" name="Core_Information" parentDetailsApplicationName="" parentDetailsFunctionality="" parentDetailsModel="" parentDetailsModelTag="@Sourav_Testing @FIT_V.1 @Sourav_Testing_Testing @Party Role" parentDetailsPortfolio="" parentDetailsTenantId="" parentDetailsUsername="" poolId="" revision="" type="STRING">
+<value description="ensures all Core Information fields (e.g., names) are valid" name="valid" neg-value="false" weight="1"/>
+<value description="leaves some Core Information fields (e.g., names) invalid" name="invalid" neg-value="true" weight="1"/>
+<value name="NA" neg-value="false" weight="1"/>
+<requirement ID="2.2_UC_1_New Client Setup"/>
+</attribute>
+<attribute attr_class="NONE" dependencies="false" description="" group="" iotype="NEITHER" name="Party_Entity" parentDetailsApplicationName="" parentDetailsFunctionality="" parentDetailsModel="" parentDetailsModelTag="@Sourav_Testing @FIT_V.1 @Sourav_Testing_Testing @Party Role" parentDetailsPortfolio="" parentDetailsTenantId="" parentDetailsUsername="" poolId="" revision="" type="STRING">
+<value description="Validate that Party Entity defaults to Organization with the ability to user override" name="Organization" neg-value="false" weight="1"/>
+<value description="Validate that Party Entity defaults to Person with the ability to user override" name="Person" neg-value="false" weight="1"/>
+<requirement ID="1_UC_1_New Client Setup"/>
+</attribute>
+<attribute attr_class="NONE" dependencies="false" description="" group="" iotype="NEITHER" name="Party_Address" parentDetailsApplicationName="" parentDetailsFunctionality="" parentDetailsModel="" parentDetailsModelTag="@Sourav_Testing @FIT_V.1 @Sourav_Testing_Testing @Party Role" parentDetailsPortfolio="" parentDetailsTenantId="" parentDetailsUsername="" poolId="" revision="" type="STRING">
+<value description="ensures all Party Address fields are valid" name="valid" neg-value="false" weight="1"/>
+<value description="leaves some Party Address fields invalid" name="invalid" neg-value="true" weight="1"/>
+<value name="NA" neg-value="false" weight="1"/>
+<requirement ID="1_UC_1_New Client Setup"/>
+</attribute>
+<attribute attr_class="NONE" dependencies="false" description="" group="" iotype="NEITHER" name="Free_form_notes" parentDetailsApplicationName="" parentDetailsFunctionality="" parentDetailsModel="" parentDetailsModelTag="@Sourav_Testing @FIT_V.1 @Sourav_Testing_Testing @Party Role" parentDetailsPortfolio="" parentDetailsTenantId="" parentDetailsUsername="" poolId="" revision="" type="STRING">
+<value description="User captures free form notes" name="yes" neg-value="false" weight="1"/>
+<value description="User does not capture any free form notes" name="no" neg-value="false" weight="1"/>
+<value name="NA" neg-value="false" weight="1"/>
+<requirement ID="1_UC_1_New Client Setup"/>
+</attribute>
+<attribute attr_class="NONE" dependencies="false" description="" group="" iotype="NEITHER" name="Submit" parentDetailsApplicationName="" parentDetailsFunctionality="" parentDetailsModel="" parentDetailsModelTag="@Sourav_Testing @FIT_V.1 @Sourav_Testing_Testing @Party Role" parentDetailsPortfolio="" parentDetailsTenantId="" parentDetailsUsername="" poolId="" revision="" type="STRING">
+<value description="User clicks the &quot;send for approval&quot; button to save their work" name="send for approval" neg-value="false" weight="1"/>
+<value description="User clicks the &quot;cancel&quot; button to disregards their work" name="cancel" neg-value="true" weight="1"/>
+<value description="User is unable to save by design because of errors; the save button is greyed out" name="greyed out" neg-value="false" weight="1"/>
+<value description="User clicks 'Save' button and creates draft record" name="save as draft" neg-value="true" weight="1"/>
+<requirement ID="1_UC_1_New Client Setup"/>
+</attribute>
+<attribute attr_class="NONE" dependencies="false" description="" group="" iotype="NEITHER" name="Submit_NA" parentDetailsApplicationName="" parentDetailsFunctionality="" parentDetailsModel="" parentDetailsModelTag="@Sourav_Testing @FIT_V.1 @Sourav_Testing_Testing @Party Role" parentDetailsPortfolio="" parentDetailsTenantId="" parentDetailsUsername="" poolId="" revision="" type="COUNTER">
+<countedValue attribute="Core_Information" value="invalid"/>
+<countedValue attribute="Party_Address" value="invalid"/>
+<requirement ID="3.2_UC_1_New Client Setup"/>
+</attribute>
+<attribute attr_class="NONE" dependencies="false" description="" group="" iotype="NEITHER" name="approval_user" parentDetailsApplicationName="" parentDetailsFunctionality="" parentDetailsModel="" parentDetailsModelTag="@Sourav_Testing @FIT_V.1 @Sourav_Testing_Testing @Party Role" parentDetailsPortfolio="" parentDetailsTenantId="" parentDetailsUsername="" poolId="" revision="" type="STRING">
+<value name="approver has not created the Party Role" neg-value="false" weight="1"/>
+<value name="approver has created the Party Role" neg-value="true" weight="1"/>
+<value name="NA" neg-value="false" weight="1"/>
+<requirement ID="3.1_UC_1_New Client Setup"/>
+</attribute>
+<attribute attr_class="NONE" dependencies="false" description="" group="" iotype="NEITHER" name="approval_process_status" parentDetailsApplicationName="" parentDetailsFunctionality="" parentDetailsModel="" parentDetailsModelTag="@Sourav_Testing @FIT_V.1 @Sourav_Testing_Testing @Party Role" parentDetailsPortfolio="" parentDetailsTenantId="" parentDetailsUsername="" poolId="" revision="" type="STRING">
+<value name="party role is not in any approval process" neg-value="false" weight="1"/>
+<value name="party role is already in approval process" neg-value="true" weight="1"/>
+<value name="NA" neg-value="false" weight="1"/>
+<requirement ID="3.1_UC_1_New Client Setup"/>
+<requirement ID="3.3_UC_1_New Client Setup"/>
+</attribute>
+<attribute attr_class="NONE" dependencies="false" description="" group="" iotype="NEITHER" name="review_approver_actions" parentDetailsApplicationName="" parentDetailsFunctionality="" parentDetailsModel="" parentDetailsModelTag="@Sourav_Testing @FIT_V.1 @Sourav_Testing_Testing @Party Role" parentDetailsPortfolio="" parentDetailsTenantId="" parentDetailsUsername="" poolId="" revision="" type="STRING">
+<value name=" Approver  Approve  and Approver Published the Party Role" neg-value="false" weight="1"/>
+<value name="The Approver rejects the party role and is not published" neg-value="false" weight="1"/>
+<value name=" Approver Approves and Onboard Specialist  Published the party Role" neg-value="false" weight="1"/>
+<value name="NA" neg-value="false" weight="1"/>
+<requirement ID="3.1_UC_1_New Client Setup"/>
+<requirement ID="3.4_UC_1_New Client Setup"/>
+<requirement ID="3.5_UC_1_New Client Setup"/>
+</attribute>
+<attribute attr_class="NONE" dependencies="false" description="" group="" iotype="NEITHER" name="approval_post_approval_user" parentDetailsApplicationName="" parentDetailsFunctionality="" parentDetailsModel="" parentDetailsModelTag="@Sourav_Testing @FIT_V.1 @Sourav_Testing_Testing @Party Role" parentDetailsPortfolio="" parentDetailsTenantId="" parentDetailsUsername="" poolId="" revision="" type="STRING">
+<value name="same Approver able to access the party role without restriction" neg-value="false" weight="1"/>
+<value name="different Inputter able to access the party role without restriction" neg-value="false" weight="1"/>
+<value name="NA" neg-value="false" weight="1"/>
+<requirement ID="3.1_UC_1_New Client Setup"/>
+</attribute>
+<restriction expression="!((User_action.equals(&quot;create new&quot;) || User_action.equals(&quot;saved draft&quot;) || User_action.equals(&quot;approved&quot;))) || (Core_Information.equals(&quot;valid&quot;) || Core_Information.equals(&quot;invalid&quot;)) &amp;&amp; (Party_Address.equals(&quot;valid&quot;) || Party_Address.equals(&quot;invalid&quot;))" group="" iff="false" isActive="true" isAutoGenerated="false" name="user action - create new" type="If-Then">
+<if-expr is_or="false">
+<focus-ctd-cond attribute="User_action" operation="Equals">
+<focus-ctd-cond-val value="create new"/>
+<focus-ctd-cond-val value="saved draft"/>
+<focus-ctd-cond-val value="approved"/>
+</focus-ctd-cond>
+</if-expr>
+<then-expr is_or="false">
+<focus-ctd-cond attribute="Core_Information" operation="Equals">
+<focus-ctd-cond-val value="valid"/>
+<focus-ctd-cond-val value="invalid"/>
+</focus-ctd-cond>
+<focus-ctd-cond attribute="Party_Address" operation="Equals">
+<focus-ctd-cond-val value="valid"/>
+<focus-ctd-cond-val value="invalid"/>
+</focus-ctd-cond>
+</then-expr>
+</restriction>
+<restriction expression="!((User_action.equals(&quot;saved draft&quot;) || User_action.equals(&quot;approved&quot;) || User_action.equals(&quot;update and resubmit a rejected Party Role&quot;))) || review_approver_actions.equals(&quot; Approver  Approve  and Approver Published the Party Role&quot;)" group="" iff="false" isActive="true" isAutoGenerated="false" name="user action -approved rejected and draft, need to see they can be approved" type="If-Then">
+<if-expr is_or="false">
+<focus-ctd-cond attribute="User_action" operation="Equals">
+<focus-ctd-cond-val value="saved draft"/>
+<focus-ctd-cond-val value="approved"/>
+<focus-ctd-cond-val value="update and resubmit a rejected Party Role"/>
+</focus-ctd-cond>
+</if-expr>
+<then-expr is_or="false">
+<focus-ctd-cond attribute="review_approver_actions" operation="Equals">
+<focus-ctd-cond-val value=" Approver  Approve  and Approver Published the Party Role"/>
+</focus-ctd-cond>
+</then-expr>
+</restriction>
+<restriction expression="!((Party_Type.equals(&quot;Trustee&quot;) || Party_Type.equals(&quot;Depository&quot;))) || Jurisdiction.equals(&quot;UK&quot;)" group="" iff="false" isActive="true" isAutoGenerated="false" name="UK specific party" type="If-Then">
+<if-expr is_or="false">
+<focus-ctd-cond attribute="Party_Type" operation="Equals">
+<focus-ctd-cond-val value="Trustee"/>
+<focus-ctd-cond-val value="Depository"/>
+</focus-ctd-cond>
+</if-expr>
+<then-expr is_or="false">
+<focus-ctd-cond attribute="Jurisdiction" operation="Equals">
+<focus-ctd-cond-val value="UK"/>
+</focus-ctd-cond>
+</then-expr>
+</restriction>
+<restriction expression="!((Party_Type.equals(&quot;Power of Attorney - Fund&quot;) || Party_Type.equals(&quot;Promoter&quot;) || Party_Type.equals(&quot;Regulatory Authority&quot;) || Party_Type.equals(&quot;Auditors&quot;) || Party_Type.equals(&quot;Board of Directors - Fund&quot;) || Party_Type.equals(&quot;Depository&quot;) || Party_Type.equals(&quot;Trustee&quot;) || Party_Type.equals(&quot;Parent Entity&quot;) || Party_Type.equals(&quot;Management Company&quot;) || Party_Type.equals(&quot;Tax Advisor - Filing/Advice&quot;) || Party_Type.equals(&quot;Fund Accountant&quot;) || Party_Type.equals(&quot;Sub TA&quot;) || Party_Type.equals(&quot;Admin Entity&quot;) || Party_Type.equals(&quot;Sponsoring Entity&quot;) || Party_Type.equals(&quot;Legal Advisors&quot;))) || Fund_Type.equals(&quot;Umbrella Fund&quot;)" group="" iff="false" isActive="true" isAutoGenerated="false" name="Umbrella level" type="If-Then">
+<if-expr is_or="false">
+<focus-ctd-cond attribute="Party_Type" operation="Equals">
+<focus-ctd-cond-val value="Power of Attorney - Fund"/>
+<focus-ctd-cond-val value="Promoter"/>
+<focus-ctd-cond-val value="Regulatory Authority"/>
+<focus-ctd-cond-val value="Auditors"/>
+<focus-ctd-cond-val value="Board of Directors - Fund"/>
+<focus-ctd-cond-val value="Depository"/>
+<focus-ctd-cond-val value="Trustee"/>
+<focus-ctd-cond-val value="Parent Entity"/>
+<focus-ctd-cond-val value="Management Company"/>
+<focus-ctd-cond-val value="Tax Advisor - Filing/Advice"/>
+<focus-ctd-cond-val value="Fund Accountant"/>
+<focus-ctd-cond-val value="Sub TA"/>
+<focus-ctd-cond-val value="Admin Entity"/>
+<focus-ctd-cond-val value="Sponsoring Entity"/>
+<focus-ctd-cond-val value="Legal Advisors"/>
+</focus-ctd-cond>
+</if-expr>
+<then-expr is_or="false">
+<focus-ctd-cond attribute="Fund_Type" operation="Equals">
+<focus-ctd-cond-val value="Umbrella Fund"/>
+</focus-ctd-cond>
+</then-expr>
+</restriction>
+<restriction expression="!((Party_Type.equals(&quot;Fund Custodian&quot;) || Party_Type.equals(&quot;Investment Manager&quot;) || Party_Type.equals(&quot;Fund Investment Advisor&quot;) || Party_Type.equals(&quot;Fund Sub-Advisor&quot;) || Party_Type.equals(&quot;Paying Agent&quot;) || Party_Type.equals(&quot;Corporate and Domiciliary Services&quot;) || Party_Type.equals(&quot;Portfolio Manager&quot;) || Party_Type.equals(&quot;Default Advisor&quot;) || Party_Type.equals(&quot;Authorized Participant&quot;) || Party_Type.equals(&quot;Fund Distributor&quot;) || Party_Type.equals(&quot;Tax Authority&quot;) || Party_Type.equals(&quot;Broker/Counterparty&quot;))) || Fund_Type.equals(&quot;Fund&quot;)" group="" iff="false" isActive="true" isAutoGenerated="false" name="Fund level" type="If-Then">
+<if-expr is_or="false">
+<focus-ctd-cond attribute="Party_Type" operation="Equals">
+<focus-ctd-cond-val value="Fund Custodian"/>
+<focus-ctd-cond-val value="Investment Manager"/>
+<focus-ctd-cond-val value="Fund Investment Advisor"/>
+<focus-ctd-cond-val value="Fund Sub-Advisor"/>
+<focus-ctd-cond-val value="Paying Agent"/>
+<focus-ctd-cond-val value="Corporate and Domiciliary Services"/>
+<focus-ctd-cond-val value="Portfolio Manager"/>
+<focus-ctd-cond-val value="Default Advisor"/>
+<focus-ctd-cond-val value="Authorized Participant"/>
+<focus-ctd-cond-val value="Fund Distributor"/>
+<focus-ctd-cond-val value="Tax Authority"/>
+<focus-ctd-cond-val value="Broker/Counterparty"/>
+</focus-ctd-cond>
+</if-expr>
+<then-expr is_or="false">
+<focus-ctd-cond attribute="Fund_Type" operation="Equals">
+<focus-ctd-cond-val value="Fund"/>
+</focus-ctd-cond>
+</then-expr>
+</restriction>
+<restriction expression="!(Party_Type.equals(&quot;Promoter&quot;)) || (Promoter_Type.equals(&quot;Management Company&quot;) || Promoter_Type.equals(&quot;Alternative Investment Fund Manager (AIFM)&quot;))" group="" iff="false" isActive="true" isAutoGenerated="false" name="Promoter type" type="If-Then">
+<if-expr is_or="false">
+<focus-ctd-cond attribute="Party_Type" operation="Equals">
+<focus-ctd-cond-val value="Promoter"/>
+</focus-ctd-cond>
+</if-expr>
+<then-expr is_or="false">
+<focus-ctd-cond attribute="Promoter_Type" operation="Equals">
+<focus-ctd-cond-val value="Management Company"/>
+<focus-ctd-cond-val value="Alternative Investment Fund Manager (AIFM)"/>
+</focus-ctd-cond>
+</then-expr>
+</restriction>
+<restriction expression="!(!Party_Type.equals(&quot;Promoter&quot;)) || Promoter_Type.equals(&quot;NA&quot;)" group="" iff="false" isActive="true" isAutoGenerated="false" name="Non promoter type" type="If-Then">
+<if-expr is_or="false">
+<focus-ctd-cond attribute="Party_Type" operation="Doesn't Equal">
+<focus-ctd-cond-val value="Promoter"/>
+</focus-ctd-cond>
+</if-expr>
+<then-expr is_or="false">
+<focus-ctd-cond attribute="Promoter_Type" operation="Equals">
+<focus-ctd-cond-val value="NA"/>
+</focus-ctd-cond>
+</then-expr>
+</restriction>
+<restriction expression="!((Party_Type.equals(&quot;Power of Attorney - Fund&quot;) || Party_Type.equals(&quot;Investment Manager&quot;) || Party_Type.equals(&quot;Promoter&quot;) || Party_Type.equals(&quot;Regulatory Authority&quot;) || Party_Type.equals(&quot;Auditors&quot;) || Party_Type.equals(&quot;Legal Advisors&quot;) || Party_Type.equals(&quot;Authorized Participant&quot;) || Party_Type.equals(&quot;Depository&quot;) || Party_Type.equals(&quot;Trustee&quot;) || Party_Type.equals(&quot;Default Advisor&quot;) || Party_Type.equals(&quot;Portfolio Manager&quot;) || Party_Type.equals(&quot;Fund Investment Advisor&quot;) || Party_Type.equals(&quot;Fund Sub-Advisor&quot;) || Party_Type.equals(&quot;Paying Agent&quot;) || Party_Type.equals(&quot;Transfer Agent&quot;) || Party_Type.equals(&quot;Fund Custodian&quot;) || Party_Type.equals(&quot;Corporate and Domiciliary Services&quot;) || Party_Type.equals(&quot;Management Company&quot;) || Party_Type.equals(&quot;Tax Advisor - Filing/Advice&quot;) || Party_Type.equals(&quot;Fund Distributor&quot;) || Party_Type.equals(&quot;Fund Accountant&quot;) || Party_Type.equals(&quot;Sub TA&quot;) || Party_Type.equals(&quot;Admin Entity&quot;) || Party_Type.equals(&quot;Tax Authority&quot;) || Party_Type.equals(&quot;Sponsoring Entity&quot;) || Party_Type.equals(&quot;Broker/Counterparty&quot;))) || Party_Entity.equals(&quot;Organization&quot;)" group="" iff="false" isActive="true" isAutoGenerated="false" name="Organization" type="If-Then">
+<if-expr is_or="false">
+<focus-ctd-cond attribute="Party_Type" operation="Equals">
+<focus-ctd-cond-val value="Power of Attorney - Fund"/>
+<focus-ctd-cond-val value="Investment Manager"/>
+<focus-ctd-cond-val value="Promoter"/>
+<focus-ctd-cond-val value="Regulatory Authority"/>
+<focus-ctd-cond-val value="Auditors"/>
+<focus-ctd-cond-val value="Legal Advisors"/>
+<focus-ctd-cond-val value="Authorized Participant"/>
+<focus-ctd-cond-val value="Depository"/>
+<focus-ctd-cond-val value="Trustee"/>
+<focus-ctd-cond-val value="Default Advisor"/>
+<focus-ctd-cond-val value="Portfolio Manager"/>
+<focus-ctd-cond-val value="Fund Investment Advisor"/>
+<focus-ctd-cond-val value="Fund Sub-Advisor"/>
+<focus-ctd-cond-val value="Paying Agent"/>
+<focus-ctd-cond-val value="Transfer Agent"/>
+<focus-ctd-cond-val value="Fund Custodian"/>
+<focus-ctd-cond-val value="Corporate and Domiciliary Services"/>
+<focus-ctd-cond-val value="Management Company"/>
+<focus-ctd-cond-val value="Tax Advisor - Filing/Advice"/>
+<focus-ctd-cond-val value="Fund Distributor"/>
+<focus-ctd-cond-val value="Fund Accountant"/>
+<focus-ctd-cond-val value="Sub TA"/>
+<focus-ctd-cond-val value="Admin Entity"/>
+<focus-ctd-cond-val value="Tax Authority"/>
+<focus-ctd-cond-val value="Sponsoring Entity"/>
+<focus-ctd-cond-val value="Broker/Counterparty"/>
+</focus-ctd-cond>
+</if-expr>
+<then-expr is_or="false">
+<focus-ctd-cond attribute="Party_Entity" operation="Equals">
+<focus-ctd-cond-val value="Organization"/>
+</focus-ctd-cond>
+</then-expr>
+</restriction>
+<restriction expression="!(Party_Type.equals(&quot;Board of Directors - Fund&quot;)) || Party_Entity.equals(&quot;Person&quot;)" group="" iff="false" isActive="true" isAutoGenerated="false" name="Person" type="If-Then">
+<if-expr is_or="false">
+<focus-ctd-cond attribute="Party_Type" operation="Equals">
+<focus-ctd-cond-val value="Board of Directors - Fund"/>
+</focus-ctd-cond>
+</if-expr>
+<then-expr is_or="false">
+<focus-ctd-cond attribute="Party_Entity" operation="Equals">
+<focus-ctd-cond-val value="Person"/>
+</focus-ctd-cond>
+</then-expr>
+</restriction>
+<restriction expression="!(Party_Type.equals(&quot;Parent Entity&quot;)) || (Party_Entity.equals(&quot;Organization&quot;) || Party_Entity.equals(&quot;Person&quot;))" group="" iff="false" isActive="true" isAutoGenerated="false" name="Both Person and Organization" type="If-Then">
+<if-expr is_or="false">
+<focus-ctd-cond attribute="Party_Type" operation="Equals">
+<focus-ctd-cond-val value="Parent Entity"/>
+</focus-ctd-cond>
+</if-expr>
+<then-expr is_or="false">
+<focus-ctd-cond attribute="Party_Entity" operation="Equals">
+<focus-ctd-cond-val value="Organization"/>
+<focus-ctd-cond-val value="Person"/>
+</focus-ctd-cond>
+</then-expr>
+</restriction>
+<restriction expression="!((Party_Type.equals(&quot;Power of Attorney - Fund&quot;) || Party_Type.equals(&quot;Investment Manager&quot;) || Party_Type.equals(&quot;Regulatory Authority&quot;) || Party_Type.equals(&quot;Auditors&quot;) || Party_Type.equals(&quot;Legal Advisors&quot;) || Party_Type.equals(&quot;Board of Directors - Fund&quot;) || Party_Type.equals(&quot;Portfolio Manager&quot;) || Party_Type.equals(&quot;Sponsoring Entity&quot;) || Party_Type.equals(&quot;Tax Authority&quot;)) || Promoter_Type.equals(&quot;Alternative Investment Fund Manager (AIFM)&quot;)) || Overridden.equals(&quot;yes&quot;)" group="" iff="false" isActive="true" isAutoGenerated="false" name="Overriden=yes" type="If-Then">
+<if-expr is_or="true">
+<focus-ctd-cond attribute="Party_Type" operation="Equals">
+<focus-ctd-cond-val value="Power of Attorney - Fund"/>
+<focus-ctd-cond-val value="Investment Manager"/>
+<focus-ctd-cond-val value="Regulatory Authority"/>
+<focus-ctd-cond-val value="Auditors"/>
+<focus-ctd-cond-val value="Legal Advisors"/>
+<focus-ctd-cond-val value="Board of Directors - Fund"/>
+<focus-ctd-cond-val value="Portfolio Manager"/>
+<focus-ctd-cond-val value="Sponsoring Entity"/>
+<focus-ctd-cond-val value="Tax Authority"/>
+</focus-ctd-cond>
+<focus-ctd-cond attribute="Promoter_Type" operation="Equals">
+<focus-ctd-cond-val value="Alternative Investment Fund Manager (AIFM)"/>
+</focus-ctd-cond>
+</if-expr>
+<then-expr is_or="false">
+<focus-ctd-cond attribute="Overridden" operation="Equals">
+<focus-ctd-cond-val value="yes"/>
+</focus-ctd-cond>
+</then-expr>
+</restriction>
+<restriction expression="!((Party_Type.equals(&quot;Trustee&quot;) || Party_Type.equals(&quot;Depository&quot;)) || Promoter_Type.equals(&quot;Management Company&quot;)) || Overridden.equals(&quot;yes but no for TA&quot;)" group="" iff="false" isActive="true" isAutoGenerated="false" name="Overridden not for TA" type="If-Then">
+<if-expr is_or="true">
+<focus-ctd-cond attribute="Party_Type" operation="Equals">
+<focus-ctd-cond-val value="Trustee"/>
+<focus-ctd-cond-val value="Depository"/>
+</focus-ctd-cond>
+<focus-ctd-cond attribute="Promoter_Type" operation="Equals">
+<focus-ctd-cond-val value="Management Company"/>
+</focus-ctd-cond>
+</if-expr>
+<then-expr is_or="false">
+<focus-ctd-cond attribute="Overridden" operation="Equals">
+<focus-ctd-cond-val value="yes but no for TA"/>
+</focus-ctd-cond>
+</then-expr>
+</restriction>
+<restriction expression="!((Party_Type.equals(&quot;Authorized Participant&quot;) || Party_Type.equals(&quot;Fund Investment Advisor&quot;) || Party_Type.equals(&quot;Fund Sub-Advisor&quot;) || Party_Type.equals(&quot;Paying Agent&quot;) || Party_Type.equals(&quot;Transfer Agent&quot;) || Party_Type.equals(&quot;Corporate and Domiciliary Services&quot;) || Party_Type.equals(&quot;Default Advisor&quot;) || Party_Type.equals(&quot;Parent Entity&quot;) || Party_Type.equals(&quot;Fund Custodian&quot;) || Party_Type.equals(&quot;Broker/Counterparty&quot;) || Party_Type.equals(&quot;Admin Entity&quot;) || Party_Type.equals(&quot;Sub TA&quot;) || Party_Type.equals(&quot;Fund Accountant&quot;))) || Overridden.equals(&quot;N/A&quot;)" group="" iff="false" isActive="true" isAutoGenerated="false" name="Overridden=NA" type="If-Then">
+<if-expr is_or="false">
+<focus-ctd-cond attribute="Party_Type" operation="Equals">
+<focus-ctd-cond-val value="Authorized Participant"/>
+<focus-ctd-cond-val value="Fund Investment Advisor"/>
+<focus-ctd-cond-val value="Fund Sub-Advisor"/>
+<focus-ctd-cond-val value="Paying Agent"/>
+<focus-ctd-cond-val value="Transfer Agent"/>
+<focus-ctd-cond-val value="Corporate and Domiciliary Services"/>
+<focus-ctd-cond-val value="Default Advisor"/>
+<focus-ctd-cond-val value="Parent Entity"/>
+<focus-ctd-cond-val value="Fund Custodian"/>
+<focus-ctd-cond-val value="Broker/Counterparty"/>
+<focus-ctd-cond-val value="Admin Entity"/>
+<focus-ctd-cond-val value="Sub TA"/>
+<focus-ctd-cond-val value="Fund Accountant"/>
+</focus-ctd-cond>
+</if-expr>
+<then-expr is_or="false">
+<focus-ctd-cond attribute="Overridden" operation="Equals">
+<focus-ctd-cond-val value="N/A"/>
+</focus-ctd-cond>
+</then-expr>
+</restriction>
+<restriction expression="!(Party_Entity.equals(&quot;Person&quot;) &amp;&amp; User_action.equals(&quot;create new&quot;)) || Free_form_notes.equals(&quot;NA&quot;)" group="" iff="false" isActive="true" isAutoGenerated="false" name="Notes=NA for Person" type="If-Then">
+<if-expr is_or="false">
+<focus-ctd-cond attribute="Party_Entity" operation="Equals">
+<focus-ctd-cond-val value="Person"/>
+</focus-ctd-cond>
+<focus-ctd-cond attribute="User_action" operation="Equals">
+<focus-ctd-cond-val value="create new"/>
+</focus-ctd-cond>
+</if-expr>
+<then-expr is_or="false">
+<focus-ctd-cond attribute="Free_form_notes" operation="Equals">
+<focus-ctd-cond-val value="NA"/>
+</focus-ctd-cond>
+</then-expr>
+</restriction>
+<restriction expression="!(Party_Entity.equals(&quot;Organization&quot;) &amp;&amp; User_action.equals(&quot;create new&quot;)) || (Free_form_notes.equals(&quot;yes&quot;) || Free_form_notes.equals(&quot;no&quot;))" group="" iff="false" isActive="true" isAutoGenerated="false" name="Note for organization" type="If-Then">
+<if-expr is_or="false">
+<focus-ctd-cond attribute="Party_Entity" operation="Equals">
+<focus-ctd-cond-val value="Organization"/>
+</focus-ctd-cond>
+<focus-ctd-cond attribute="User_action" operation="Equals">
+<focus-ctd-cond-val value="create new"/>
+</focus-ctd-cond>
+</if-expr>
+<then-expr is_or="false">
+<focus-ctd-cond attribute="Free_form_notes" operation="Equals">
+<focus-ctd-cond-val value="yes"/>
+<focus-ctd-cond-val value="no"/>
+</focus-ctd-cond>
+</then-expr>
+</restriction>
+<restriction expression="!((User_action.equals(&quot;link new party to a Fund setup&quot;) || User_action.equals(&quot;link new party to an Umbrella fund setup&quot;))) || Party_Address.equals(&quot;NA&quot;) &amp;&amp; Free_form_notes.equals(&quot;NA&quot;) &amp;&amp; Core_Information.equals(&quot;NA&quot;) &amp;&amp; Search_criteria.equals(&quot;Party ID&quot;)" group="" iff="false" isActive="true" isAutoGenerated="false" name="Link new party" type="If-Then">
+<if-expr is_or="false">
+<focus-ctd-cond attribute="User_action" operation="Equals">
+<focus-ctd-cond-val value="link new party to a Fund setup"/>
+<focus-ctd-cond-val value="link new party to an Umbrella fund setup"/>
+</focus-ctd-cond>
+</if-expr>
+<then-expr is_or="false">
+<focus-ctd-cond attribute="Party_Address" operation="Equals">
+<focus-ctd-cond-val value="NA"/>
+</focus-ctd-cond>
+<focus-ctd-cond attribute="Free_form_notes" operation="Equals">
+<focus-ctd-cond-val value="NA"/>
+</focus-ctd-cond>
+<focus-ctd-cond attribute="Core_Information" operation="Equals">
+<focus-ctd-cond-val value="NA"/>
+</focus-ctd-cond>
+<focus-ctd-cond attribute="Search_criteria" operation="Equals">
+<focus-ctd-cond-val value="Party ID"/>
+</focus-ctd-cond>
+</then-expr>
+</restriction>
+<restriction expression="!(Submit_NA != 0) || (Submit.equals(&quot;cancel&quot;) || Submit.equals(&quot;greyed out&quot;))" group="" iff="false" isActive="true" isAutoGenerated="false" name="Counter (1/2)" type="If-Then">
+<if-expr is_or="false">
+<focus-ctd-cond attribute="Submit_NA" operation="Doesn't Equal">
+<focus-ctd-cond-val value="0"/>
+</focus-ctd-cond>
+</if-expr>
+<then-expr is_or="false">
+<focus-ctd-cond attribute="Submit" operation="Equals">
+<focus-ctd-cond-val value="cancel"/>
+<focus-ctd-cond-val value="greyed out"/>
+</focus-ctd-cond>
+</then-expr>
+</restriction>
+<restriction expression="!(Submit.equals(&quot;greyed out&quot;)) || Submit_NA != 0" group="" iff="false" isActive="true" isAutoGenerated="false" name="Counter (2/2)" type="If-Then">
+<if-expr is_or="false">
+<focus-ctd-cond attribute="Submit" operation="Equals">
+<focus-ctd-cond-val value="greyed out"/>
+</focus-ctd-cond>
+</if-expr>
+<then-expr is_or="false">
+<focus-ctd-cond attribute="Submit_NA" operation="Doesn't Equal">
+<focus-ctd-cond-val value="0"/>
+</focus-ctd-cond>
+</then-expr>
+</restriction>
+<restriction expression="!(Submit.equals(&quot;send for approval&quot;)) || !approval_user.equals(&quot;NA&quot;) &amp;&amp; !approval_process_status.equals(&quot;NA&quot;) &amp;&amp; !approval_post_approval_user.equals(&quot;NA&quot;)" group="" iff="false" isActive="true" isAutoGenerated="false" name="Submit - send for approval" type="If-Then">
+<if-expr is_or="false">
+<focus-ctd-cond attribute="Submit" operation="Equals">
+<focus-ctd-cond-val value="send for approval"/>
+</focus-ctd-cond>
+</if-expr>
+<then-expr is_or="false">
+<focus-ctd-cond attribute="approval_user" operation="Doesn't Equal">
+<focus-ctd-cond-val value="NA"/>
+</focus-ctd-cond>
+<focus-ctd-cond attribute="approval_process_status" operation="Doesn't Equal">
+<focus-ctd-cond-val value="NA"/>
+</focus-ctd-cond>
+<focus-ctd-cond attribute="approval_post_approval_user" operation="Doesn't Equal">
+<focus-ctd-cond-val value="NA"/>
+</focus-ctd-cond>
+</then-expr>
+</restriction>
+<restriction expression="!(!Submit.equals(&quot;send for approval&quot;)) || approval_user.equals(&quot;NA&quot;) &amp;&amp; approval_process_status.equals(&quot;NA&quot;) &amp;&amp; approval_post_approval_user.equals(&quot;NA&quot;)" group="" iff="false" isActive="true" isAutoGenerated="false" name="Submit - ! send for approval" type="If-Then">
+<if-expr is_or="false">
+<focus-ctd-cond attribute="Submit" operation="Doesn't Equal">
+<focus-ctd-cond-val value="send for approval"/>
+</focus-ctd-cond>
+</if-expr>
+<then-expr is_or="false">
+<focus-ctd-cond attribute="approval_user" operation="Equals">
+<focus-ctd-cond-val value="NA"/>
+</focus-ctd-cond>
+<focus-ctd-cond attribute="approval_process_status" operation="Equals">
+<focus-ctd-cond-val value="NA"/>
+</focus-ctd-cond>
+<focus-ctd-cond attribute="approval_post_approval_user" operation="Equals">
+<focus-ctd-cond-val value="NA"/>
+</focus-ctd-cond>
+</then-expr>
+</restriction>
+<restriction expression="!(approval_user.equals(&quot;approver has created the Party Role&quot;) || approval_process_status.equals(&quot;party role is already in approval process&quot;)) || review_approver_actions.equals(&quot;NA&quot;)" group="" iff="false" isActive="true" isAutoGenerated="false" name="Approval user - input some of the fund data" type="If-Then">
+<if-expr is_or="true">
+<focus-ctd-cond attribute="approval_user" operation="Equals">
+<focus-ctd-cond-val value="approver has created the Party Role"/>
+</focus-ctd-cond>
+<focus-ctd-cond attribute="approval_process_status" operation="Equals">
+<focus-ctd-cond-val value="party role is already in approval process"/>
+</focus-ctd-cond>
+</if-expr>
+<then-expr is_or="false">
+<focus-ctd-cond attribute="review_approver_actions" operation="Equals">
+<focus-ctd-cond-val value="NA"/>
+</focus-ctd-cond>
+</then-expr>
+</restriction>
+<restriction expression="!(approval_process_status.equals(&quot;party role is not in any approval process&quot;) &amp;&amp; approval_user.equals(&quot;approver has not created the Party Role&quot;)) || !review_approver_actions.equals(&quot;NA&quot;)" group="" iff="false" isActive="true" isAutoGenerated="false" name="" type="If-Then">
+<if-expr is_or="false">
+<focus-ctd-cond attribute="approval_process_status" operation="Equals">
+<focus-ctd-cond-val value="party role is not in any approval process"/>
+</focus-ctd-cond>
+<focus-ctd-cond attribute="approval_user" operation="Equals">
+<focus-ctd-cond-val value="approver has not created the Party Role"/>
+</focus-ctd-cond>
+</if-expr>
+<then-expr is_or="false">
+<focus-ctd-cond attribute="review_approver_actions" operation="Doesn't Equal">
+<focus-ctd-cond-val value="NA"/>
+</focus-ctd-cond>
+</then-expr>
+</restriction>
+<restriction expression="!((Submit.equals(&quot;cancel&quot;) || Submit.equals(&quot;greyed out&quot;))) || approval_process_status.equals(&quot;NA&quot;) &amp;&amp; review_approver_actions.equals(&quot;NA&quot;) &amp;&amp; approval_post_approval_user.equals(&quot;NA&quot;)" group="" iff="false" isActive="true" isAutoGenerated="false" name="" type="If-Then">
+<if-expr is_or="false">
+<focus-ctd-cond attribute="Submit" operation="Equals">
+<focus-ctd-cond-val value="cancel"/>
+<focus-ctd-cond-val value="greyed out"/>
+</focus-ctd-cond>
+</if-expr>
+<then-expr is_or="false">
+<focus-ctd-cond attribute="approval_process_status" operation="Equals">
+<focus-ctd-cond-val value="NA"/>
+</focus-ctd-cond>
+<focus-ctd-cond attribute="review_approver_actions" operation="Equals">
+<focus-ctd-cond-val value="NA"/>
+</focus-ctd-cond>
+<focus-ctd-cond attribute="approval_post_approval_user" operation="Equals">
+<focus-ctd-cond-val value="NA"/>
+</focus-ctd-cond>
+</then-expr>
+</restriction>
+<restriction expression="!(service_lines.equals(&quot;TA  Onshore&quot;)) || (Party_Type.equals(&quot;Promoter&quot;) || Party_Type.equals(&quot;Investment Manager&quot;) || Party_Type.equals(&quot;Management Company&quot;))" group="" iff="false" isActive="true" isAutoGenerated="false" name="" type="If-Then">
+<if-expr is_or="false">
+<focus-ctd-cond attribute="service_lines" operation="Equals">
+<focus-ctd-cond-val value="TA  Onshore"/>
+</focus-ctd-cond>
+</if-expr>
+<then-expr is_or="false">
+<focus-ctd-cond attribute="Party_Type" operation="Equals">
+<focus-ctd-cond-val value="Promoter"/>
+<focus-ctd-cond-val value="Investment Manager"/>
+<focus-ctd-cond-val value="Management Company"/>
+</focus-ctd-cond>
+</then-expr>
+</restriction>
+<restriction expression="!(Fund_Type.equals(&quot;Product&quot;)) || (Party_Type.equals(&quot;Product Administrator&quot;) || Party_Type.equals(&quot;Plan Manager&quot;) || Party_Type.equals(&quot;External Product Provider&quot;))" group="" iff="false" isActive="true" isAutoGenerated="false" name="" type="If-Then">
+<if-expr is_or="false">
+<focus-ctd-cond attribute="Fund_Type" operation="Equals">
+<focus-ctd-cond-val value="Product"/>
+</focus-ctd-cond>
+</if-expr>
+<then-expr is_or="false">
+<focus-ctd-cond attribute="Party_Type" operation="Equals">
+<focus-ctd-cond-val value="Product Administrator"/>
+<focus-ctd-cond-val value="Plan Manager"/>
+<focus-ctd-cond-val value="External Product Provider"/>
+</focus-ctd-cond>
+</then-expr>
+</restriction>
+<restriction expression="!(Jurisdiction.equals(&quot;Non UK&quot;)) || service_lines.equals(&quot;TA - Offshore&quot;)" group="" iff="false" isActive="true" isAutoGenerated="false" name="" type="If-Then">
+<if-expr is_or="false">
+<focus-ctd-cond attribute="Jurisdiction" operation="Equals">
+<focus-ctd-cond-val value="Non UK"/>
+</focus-ctd-cond>
+</if-expr>
+<then-expr is_or="false">
+<focus-ctd-cond attribute="service_lines" operation="Equals">
+<focus-ctd-cond-val value="TA - Offshore"/>
+</focus-ctd-cond>
+</then-expr>
+</restriction>
+<negative-combination>
+<attr-value attribute="Party_Address" value="invalid"/>
+</negative-combination>
+<negative-combination>
+<attr-value attribute="Submit" value="cancel"/>
+</negative-combination>
+<negative-combination>
+<attr-value attribute="Submit" value="save as draft"/>
+</negative-combination>
+<negative-combination>
+<attr-value attribute="approval_user" value="approver has created the Party Role"/>
+</negative-combination>
+<negative-combination>
+<attr-value attribute="Core_Information" value="invalid"/>
+</negative-combination>
+<negative-combination>
+<attr-value attribute="User_action" value="approved"/>
+</negative-combination>
+<negative-combination>
+<attr-value attribute="User_action" value="link new party to a Fund setup"/>
+</negative-combination>
+<negative-combination>
+<attr-value attribute="User_action" value="link new party to an Umbrella fund setup"/>
+</negative-combination>
+<negative-combination>
+<attr-value attribute="User_action" value="saved draft"/>
+</negative-combination>
+<negative-combination>
+<attr-value attribute="User_action" value="update and resubmit a rejected Party Role"/>
+</negative-combination>
+<negative-combination>
+<attr-value attribute="approval_process_status" value="party role is already in approval process"/>
+</negative-combination>
+<requirements-tracking-combination>
+<attr-value attribute="Fund_Type" value="Fund"/>
+<requirement ID="1.1_UC_1_New Client Setup"/>
+</requirements-tracking-combination>
+<requirements-tracking-combination>
+<attr-value attribute="Fund_Type" value="Product"/>
+<requirement ID="1_UC_7_TA-Onshore"/>
+</requirements-tracking-combination>
+<requirements-tracking-combination>
+<attr-value attribute="Fund_Type" value="Umbrella Fund"/>
+<requirement ID="1.1_UC_1_New Client Setup"/>
+</requirements-tracking-combination>
+<requirements-collection>
+<requirement-node Ambiguity="" Complexity="Simple" DocumentName="" Keywords="" Ranking="2" RequirementDescription="" RequirementId="3_UC_1_New Client Setup" Restrictions=""/>
+<requirement-node Ambiguity="" Complexity="Simple" DocumentName="" Keywords="" Ranking="1" RequirementDescription="" RequirementId="1_UC_1_New Client Setup" Restrictions=""/>
+<requirement-node Ambiguity="" Complexity="Simple" DocumentName="" Keywords="" Ranking="1" RequirementDescription="" RequirementId="3.1_UC_1_New Client Setup" Restrictions=""/>
+<requirement-node Ambiguity="" Complexity="Simple" DocumentName="" Keywords="" Ranking="1" RequirementDescription="" RequirementId="1.1_UC_1_New Client Setup" Restrictions=""/>
+<requirement-node Ambiguity="" Complexity="Simple" DocumentName="" Keywords="" Ranking="1" RequirementDescription="" RequirementId="3.3_UC_1_New Client Setup" Restrictions=""/>
+<requirement-node Ambiguity="" Complexity="Simple" DocumentName="" Keywords="" Ranking="1" RequirementDescription="" RequirementId="3.5_UC_1_New Client Setup" Restrictions=""/>
+<requirement-node Ambiguity="" Complexity="Simple" DocumentName="" Keywords="" Ranking="1" RequirementDescription="" RequirementId="2_UC_7_TA-Onshore" Restrictions=""/>
+<requirement-node Ambiguity="" Complexity="Simple" DocumentName="" Keywords="" Ranking="1" RequirementDescription="" RequirementId="1.4_UC_1_New Client Setup" Restrictions=""/>
+<requirement-node Ambiguity="" Complexity="Simple" DocumentName="" Keywords="" Ranking="1" RequirementDescription="" RequirementId="1.2_UC_1_New Client Setup" Restrictions=""/>
+<requirement-node Ambiguity="" Complexity="Simple" DocumentName="" Keywords="" Ranking="1" RequirementDescription="" RequirementId="3.7_UC_1_New Client Setup" Restrictions=""/>
+<requirement-node Ambiguity="" Complexity="Simple" DocumentName="" Keywords="" Ranking="1" RequirementDescription="" RequirementId="3.2_UC_1_New Client Setup" Restrictions=""/>
+<requirement-node Ambiguity="" Complexity="Simple" DocumentName="" Keywords="" Ranking="1" RequirementDescription="" RequirementId="1_UC_7_TA-Onshore" Restrictions=""/>
+<requirement-node Ambiguity="" Complexity="Simple" DocumentName="" Keywords="" Ranking="1" RequirementDescription="" RequirementId="2.1_UC_1_New Client Setup" Restrictions=""/>
+<requirement-node Ambiguity="" Complexity="Simple" DocumentName="" Keywords="" Ranking="1" RequirementDescription="" RequirementId="3.6_UC_1_New Client Setup" Restrictions=""/>
+<requirement-node Ambiguity="" Complexity="Simple" DocumentName="" Keywords="" Ranking="1" RequirementDescription="" RequirementId="3.4_UC_1_New Client Setup" Restrictions=""/>
+<requirement-node Ambiguity="" Complexity="Simple" DocumentName="" Keywords="" Ranking="1" RequirementDescription="" RequirementId="1.3_UC_1_New Client Setup" Restrictions=""/>
+<requirement-node Ambiguity="" Complexity="Simple" DocumentName="" Keywords="" Ranking="1" RequirementDescription="" RequirementId="2.2_UC_1_New Client Setup" Restrictions=""/>
+<requirement-node Ambiguity="" Complexity="Simple" DocumentName="" Keywords="" Ranking="1" RequirementDescription="" RequirementId="3.8_UC_1_New Client Setup" Restrictions=""/>
+</requirements-collection>
+<coverage-reqs-sets defaultCoverageRequirementsSet="Phase 1_5 client">
+<coverage-reqs-set description="Single coverage for Party type" name="Hybrid - Single Party">
+<coverage-req>
+<attribute name="User_action"/>
+<attribute name="Jurisdiction"/>
+<attribute name="Search_criteria"/>
+<attribute name="Fund_Type"/>
+<attribute name="Overridden"/>
+<attribute name="Promoter_Type"/>
+<attribute name="Core_Information"/>
+<attribute name="Party_Entity"/>
+<attribute name="Party_Address"/>
+<attribute name="Free_form_notes"/>
+<attribute name="Submit"/>
+<coverage-goal coverage-goal-val="2"/>
+</coverage-req>
+<coverage-req>
+<attribute name="User_action"/>
+<attribute name="Jurisdiction"/>
+<attribute name="Search_criteria"/>
+<attribute name="Fund_Type"/>
+<attribute name="Party_Type"/>
+<attribute name="Overridden"/>
+<attribute name="Promoter_Type"/>
+<attribute name="Core_Information"/>
+<attribute name="Party_Entity"/>
+<attribute name="Party_Address"/>
+<attribute name="Free_form_notes"/>
+<attribute name="Submit"/>
+<attribute name="approval_user"/>
+<attribute name="approval_process_status"/>
+<attribute name="review_approver_actions"/>
+<attribute name="approval_post_approval_user"/>
+<coverage-goal coverage-goal-val="1"/>
+</coverage-req>
+</coverage-reqs-set>
+<coverage-reqs-set description="" name="Level 2">
+<coverage-req>
+<attribute name="User_action"/>
+<attribute name="Jurisdiction"/>
+<attribute name="Search_criteria"/>
+<attribute name="Fund_Type"/>
+<attribute name="Party_Type"/>
+<attribute name="Overridden"/>
+<attribute name="Promoter_Type"/>
+<attribute name="Core_Information"/>
+<attribute name="Party_Entity"/>
+<attribute name="Party_Address"/>
+<attribute name="Free_form_notes"/>
+<attribute name="Submit"/>
+<coverage-goal coverage-goal-val="2"/>
+</coverage-req>
+</coverage-reqs-set>
+<coverage-reqs-set description="Single coverage for Party type" name="Phase 1_5 client">
+<coverage-req>
+<attribute name="Submit"/>
+<attribute name="approval_user"/>
+<attribute name="approval_process_status"/>
+<attribute name="review_approver_actions"/>
+<attribute name="approval_post_approval_user"/>
+<coverage-goal coverage-goal-val="2"/>
+</coverage-req>
+<coverage-req>
+<attribute name="User_action"/>
+<attribute name="Jurisdiction"/>
+<attribute name="Search_criteria"/>
+<attribute name="Fund_Type"/>
+<attribute name="Party_Type"/>
+<attribute name="service_lines"/>
+<attribute name="Overridden"/>
+<attribute name="Promoter_Type"/>
+<attribute name="Core_Information"/>
+<attribute name="Party_Entity"/>
+<attribute name="Party_Address"/>
+<attribute name="Free_form_notes"/>
+<attribute name="Submit"/>
+<attribute name="approval_user"/>
+<attribute name="approval_process_status"/>
+<attribute name="review_approver_actions"/>
+<attribute name="approval_post_approval_user"/>
+<coverage-goal coverage-goal-val="1"/>
+</coverage-req>
+</coverage-reqs-set>
+</coverage-reqs-sets>
+<neg-coverage-reqs-sets defaultCoverageRequirementsSet="SingleNegativeCoverageRequirementsSet" isAutoNegCoverageRequirements="true">
+<coverage-reqs-set description="" name="SingleNegativeCoverageRequirementsSet">
+<coverage-req>
+<coverage-goal coverage-goal-val="1"/>
+<negative-attribute-combination>
+<attribute name="Party_Address"/>
+</negative-attribute-combination>
+</coverage-req>
+<coverage-req>
+<coverage-goal coverage-goal-val="1"/>
+<negative-attribute-combination>
+<attribute name="Submit"/>
+</negative-attribute-combination>
+</coverage-req>
+<coverage-req>
+<coverage-goal coverage-goal-val="1"/>
+<negative-attribute-combination>
+<attribute name="approval_user"/>
+</negative-attribute-combination>
+</coverage-req>
+<coverage-req>
+<coverage-goal coverage-goal-val="1"/>
+<negative-attribute-combination>
+<attribute name="Core_Information"/>
+</negative-attribute-combination>
+</coverage-req>
+<coverage-req>
+<coverage-goal coverage-goal-val="1"/>
+<negative-attribute-combination>
+<attribute name="User_action"/>
+</negative-attribute-combination>
+</coverage-req>
+<coverage-req>
+<coverage-goal coverage-goal-val="1"/>
+<negative-attribute-combination>
+<attribute name="approval_process_status"/>
+</negative-attribute-combination>
+</coverage-req>
+</coverage-reqs-set>
+</neg-coverage-reqs-sets>
+<focus-ctd-decoration decorationName="DefaultTestCaseNameDecoration" decorationType="testCaseName" isActiveDecoration="false">
+<focus-ctd-trigger appliance="ALWAYS" is_or="false" name="Log_on" negative="false" suppressNewLine="false" triggerType="Test Description">
+<focus-ctd-single-template>
+<focus-ctd-template text="Onboarding Specialist logs on to the Fund Utility with Inputter credentials with the intent to &lt;att_val_desc = User_action&gt;"/>
+</focus-ctd-single-template>
+</focus-ctd-trigger>
+<focus-ctd-trigger appliance="ALWAYS" is_or="false" name="Party_Type" negative="false" suppressNewLine="false" triggerType="Test Description">
+<focus-ctd-single-template>
+<focus-ctd-template text="Inputter selects to work on &lt;att_name = Jurisdiction&gt; - based  &lt;att_name = Party_Type&gt; "/>
+</focus-ctd-single-template>
+<focus-ctd-cond attribute="User_action" operation="Equals">
+<focus-ctd-cond-val value="create new"/>
+</focus-ctd-cond>
+</focus-ctd-trigger>
+<focus-ctd-trigger appliance="ALWAYS" is_or="false" name="Promoter_Type" negative="false" suppressNewLine="false" triggerType="Test Description">
+<focus-ctd-single-template>
+<focus-ctd-template text="The type of promoter selected is &lt;att_name = Promoter_Type&gt;"/>
+</focus-ctd-single-template>
+<focus-ctd-cond attribute="Party_Type" operation="Equals">
+<focus-ctd-cond-val value="Promoter"/>
+</focus-ctd-cond>
+</focus-ctd-trigger>
+<focus-ctd-trigger appliance="ALWAYS" is_or="false" name="Core_Information_new" negative="false" suppressNewLine="false" triggerType="Test Description">
+<focus-ctd-single-template>
+<focus-ctd-template text="Inputter will enter Core Information and &lt;att_val_desc = Core_Information&gt;"/>
+</focus-ctd-single-template>
+<focus-ctd-cond attribute="User_action" operation="Equals">
+<focus-ctd-cond-val value="create new"/>
+</focus-ctd-cond>
+</focus-ctd-trigger>
+<focus-ctd-trigger appliance="ALWAYS" is_or="false" name="Capture Box Groups" negative="false" suppressNewLine="false" triggerType="Test Description">
+<focus-ctd-single-template>
+<focus-ctd-template text="Inputter need to Enter the &quot; Company Environment And Box Groups &quot; details. "/>
+</focus-ctd-single-template>
+<focus-ctd-cond attribute="Party_Type" operation="Equals">
+<focus-ctd-cond-val value="Management Company"/>
+<focus-ctd-cond-val value="External Product Provider"/>
+<focus-ctd-cond-val value="Plan Manager"/>
+<focus-ctd-cond-val value="Product Administrator"/>
+</focus-ctd-cond>
+</focus-ctd-trigger>
+<focus-ctd-trigger appliance="ALWAYS" is_or="false" name="Submit_new_fund_setup" negative="false" suppressNewLine="false" triggerType="Test Description">
+<focus-ctd-single-template>
+<focus-ctd-template text="Inputter completes the &lt;att_name = Fund_Type&gt; setup, linked to the relevant party role"/>
+</focus-ctd-single-template>
+<focus-ctd-cond attribute="User_action" operation="Equals">
+<focus-ctd-cond-val value="link new party to a Fund setup"/>
+<focus-ctd-cond-val value="link new party to an Umbrella fund setup"/>
+</focus-ctd-cond>
+</focus-ctd-trigger>
+<focus-ctd-trigger appliance="ALWAYS" is_or="false" name="NEW_submit_save" negative="false" suppressNewLine="false" triggerType="Test Description">
+<focus-ctd-single-template>
+<focus-ctd-template text="Inputter clicks &quot;send for approval&quot; and Enter  &quot;The Email ID &quot;  validates information is updated accordingly and Mail is send to the Approver and   Logs Out"/>
+</focus-ctd-single-template>
+<focus-ctd-cond attribute="Submit" operation="Equals">
+<focus-ctd-cond-val value="send for approval"/>
+</focus-ctd-cond>
+</focus-ctd-trigger>
+<focus-ctd-trigger appliance="ALWAYS" is_or="false" name="NEW_submit_cancel" negative="false" suppressNewLine="false" triggerType="Test Description">
+<focus-ctd-single-template>
+<focus-ctd-template text="Inputter clicks &quot;cancel&quot; to disregard work and returns back to landing page and Logs Out"/>
+</focus-ctd-single-template>
+<focus-ctd-cond attribute="Submit" operation="Equals">
+<focus-ctd-cond-val value="cancel"/>
+</focus-ctd-cond>
+</focus-ctd-trigger>
+<focus-ctd-trigger appliance="ALWAYS" is_or="false" name="NEW_submit_grey" negative="false" suppressNewLine="false" triggerType="Test Description">
+<focus-ctd-single-template>
+<focus-ctd-template text="Validate cannot click &quot;Send for Approval&quot; because it is greyed out due to errors&#10;Inputter will also validate able to correct the error and proceed to &quot;Send for Approval&quot;"/>
+</focus-ctd-single-template>
+<focus-ctd-cond attribute="Submit" operation="Equals">
+<focus-ctd-cond-val value="greyed out"/>
+</focus-ctd-cond>
+</focus-ctd-trigger>
+<focus-ctd-trigger appliance="ALWAYS" is_or="false" name="Approval" negative="false" suppressNewLine="false" triggerType="Test Description">
+<focus-ctd-single-template>
+<focus-ctd-template text="-----APPROVAL-----"/>
+</focus-ctd-single-template>
+</focus-ctd-trigger>
+<focus-ctd-trigger appliance="ALWAYS" is_or="false" name="approval process status not in any current approval" negative="false" suppressNewLine="false" triggerType="Test Description">
+<focus-ctd-single-template>
+<focus-ctd-template text="Log In as a Approver"/>
+</focus-ctd-single-template>
+<focus-ctd-cond attribute="approval_process_status" operation="Equals">
+<focus-ctd-cond-val value="party role is not in any approval process"/>
+</focus-ctd-cond>
+</focus-ctd-trigger>
+<focus-ctd-trigger appliance="ALWAYS" is_or="false" name="approval process status_allready in approval" negative="false" suppressNewLine="false" triggerType="Test Description">
+<focus-ctd-single-template>
+<focus-ctd-template text="A separate different Approver will have started approval process for this Party Role to validate another Approver cannot then start the approval process while actively being approved already "/>
+</focus-ctd-single-template>
+<focus-ctd-cond attribute="approval_process_status" operation="Equals">
+<focus-ctd-cond-val value="party role is already in approval process"/>
+</focus-ctd-cond>
+</focus-ctd-trigger>
+<focus-ctd-trigger appliance="ALWAYS" is_or="false" name="approval_user did not create party role" negative="false" suppressNewLine="false" triggerType="Test Description">
+<focus-ctd-single-template>
+<focus-ctd-template text="Party Roles in &quot; Pending Approval &quot; State is  on Approver`s  Landing Page"/>
+</focus-ctd-single-template>
+<focus-ctd-cond attribute="approval_user" operation="Equals">
+<focus-ctd-cond-val value="approver has not created the Party Role"/>
+</focus-ctd-cond>
+</focus-ctd-trigger>
+<focus-ctd-trigger appliance="ALWAYS" is_or="false" name="approval_user has created the party role" negative="false" suppressNewLine="false" triggerType="Test Description">
+<focus-ctd-single-template>
+<focus-ctd-template text="The same Inputter who created the Party Role will sign back in now as the Approver and be unable to make an Approval on the current Party Role "/>
+</focus-ctd-single-template>
+<focus-ctd-cond attribute="approval_user" operation="Equals">
+<focus-ctd-cond-val value="approver has created the Party Role"/>
+</focus-ctd-cond>
+</focus-ctd-trigger>
+<focus-ctd-trigger appliance="ALWAYS" is_or="false" name="review_approver_actions" negative="false" suppressNewLine="false" triggerType="Test Description">
+<focus-ctd-single-template>
+<focus-ctd-template text="&lt;att_name = review_approver_actions&gt;"/>
+</focus-ctd-single-template>
+<focus-ctd-cond attribute="review_approver_actions" operation="Equals">
+<focus-ctd-cond-val value="The Approver rejects the party role and is not published"/>
+<focus-ctd-cond-val value=" Approver  Approve  and Approver Published the Party Role"/>
+</focus-ctd-cond>
+</focus-ctd-trigger>
+<focus-ctd-trigger appliance="ALWAYS" is_or="false" name="approval_post_approval_user" negative="false" suppressNewLine="false" triggerType="Test Description">
+<focus-ctd-single-template>
+<focus-ctd-template text="&lt;att_name = approval_post_approval_user&gt;"/>
+</focus-ctd-single-template>
+<focus-ctd-cond attribute="approval_post_approval_user" operation="Equals">
+<focus-ctd-cond-val value="different Inputter able to access the party role without restriction"/>
+<focus-ctd-cond-val value="same Approver able to access the party role without restriction"/>
+</focus-ctd-cond>
+</focus-ctd-trigger>
+<focus-ctd-trigger appliance="ALWAYS" is_or="false" name="NEGATIVE" negative="false" suppressNewLine="false" triggerType="Test Description">
+<focus-ctd-single-template>
+<focus-ctd-template text="-----SPECIAL CONSIDERATIONS-----"/>
+</focus-ctd-single-template>
+</focus-ctd-trigger>
+<focus-ctd-trigger appliance="ALWAYS" is_or="false" name="negative_Core_information - invalid" negative="false" suppressNewLine="false" triggerType="Test Description">
+<focus-ctd-single-template>
+<focus-ctd-template text="The Core Information has invalid data and validate will not be able to submit for approval"/>
+</focus-ctd-single-template>
+<focus-ctd-cond attribute="Core_Information" operation="Equals">
+<focus-ctd-cond-val value="invalid"/>
+</focus-ctd-cond>
+</focus-ctd-trigger>
+<focus-ctd-trigger appliance="ALWAYS" is_or="false" name="negative_Party_address - invalid" negative="false" suppressNewLine="false" triggerType="Test Description">
+<focus-ctd-single-template>
+<focus-ctd-template text="The Party Address is invalid and will not allow to submit for approval"/>
+</focus-ctd-single-template>
+<focus-ctd-cond attribute="Party_Address" operation="Equals">
+<focus-ctd-cond-val value="invalid"/>
+</focus-ctd-cond>
+</focus-ctd-trigger>
+<focus-ctd-trigger appliance="ALWAYS" is_or="false" name="Submit - cancel" negative="false" suppressNewLine="false" triggerType="Test Description">
+<focus-ctd-single-template>
+<focus-ctd-template text="Inputter Cancels the Party Role creation process and does not send for approval, and information not saved"/>
+</focus-ctd-single-template>
+<focus-ctd-cond attribute="Submit" operation="Equals">
+<focus-ctd-cond-val value="cancel"/>
+</focus-ctd-cond>
+</focus-ctd-trigger>
+<focus-ctd-trigger appliance="ALWAYS" is_or="false" name="User_action link new party to Fund and umbrella" negative="false" suppressNewLine="false" triggerType="Test Description">
+<focus-ctd-single-template>
+<focus-ctd-template text="Once approved the Inputter will go into Fund Utility to &lt;att_name = User_action&gt;  to validate it is linked successfully "/>
+</focus-ctd-single-template>
+<focus-ctd-cond attribute="User_action" operation="Equals">
+<focus-ctd-cond-val value="link new party to a Fund setup"/>
+<focus-ctd-cond-val value="link new party to an Umbrella fund setup"/>
+</focus-ctd-cond>
+</focus-ctd-trigger>
+<focus-ctd-trigger appliance="ALWAYS" is_or="false" name="Approval process" negative="false" suppressNewLine="false" triggerType="Test Description">
+<focus-ctd-single-template>
+<focus-ctd-template text="The Party Role is already in approval Process and validate user is unable to open and modify"/>
+</focus-ctd-single-template>
+<focus-ctd-cond attribute="approval_process_status" operation="Equals">
+<focus-ctd-cond-val value="party role is already in approval process"/>
+</focus-ctd-cond>
+</focus-ctd-trigger>
+<focus-ctd-trigger appliance="ALWAYS" is_or="false" name="approval_user" negative="false" suppressNewLine="false" triggerType="Test Description">
+<focus-ctd-single-template>
+<focus-ctd-template text="Approver has created the Party Role and will not be able to approve the same one"/>
+</focus-ctd-single-template>
+<focus-ctd-cond attribute="approval_user" operation="Equals">
+<focus-ctd-cond-val value="approver has created the Party Role"/>
+</focus-ctd-cond>
+</focus-ctd-trigger>
+<focus-ctd-trigger appliance="ALWAYS" is_or="false" name="User_action link new party to Fund and umbrella_1" negative="false" suppressNewLine="false" triggerType="Test Description">
+<focus-ctd-single-template>
+<focus-ctd-template text="After being rejected, the Inputter will find in rejected status and make updates to validate able to resubmit multiple times"/>
+</focus-ctd-single-template>
+<focus-ctd-cond attribute="User_action" operation="Equals">
+<focus-ctd-cond-val value="update and resubmit a rejected Party Role"/>
+</focus-ctd-cond>
+</focus-ctd-trigger>
+<focus-ctd-trigger appliance="ALWAYS" is_or="false" name="negative_user_action - saved draft" negative="false" suppressNewLine="false" triggerType="Test Description">
+<focus-ctd-single-template>
+<focus-ctd-template text="User will select a Party Role that has previously been saved in Draft status and validate the Inputter can perform modifications and submit and have approved"/>
+</focus-ctd-single-template>
+<focus-ctd-cond attribute="User_action" operation="Equals">
+<focus-ctd-cond-val value="saved draft"/>
+</focus-ctd-cond>
+</focus-ctd-trigger>
+<focus-ctd-trigger appliance="ALWAYS" is_or="false" name="negative_user_action - approved" negative="false" suppressNewLine="false" triggerType="Test Description">
+<focus-ctd-single-template>
+<focus-ctd-template text="User will select a Party Role that has previously been Approved but not yet Published and validate the Inputter is alerted additional approval is needed and can perform modifications and submit again for approval"/>
+</focus-ctd-single-template>
+<focus-ctd-cond attribute="User_action" operation="Equals">
+<focus-ctd-cond-val value="approved"/>
+</focus-ctd-cond>
+</focus-ctd-trigger>
+<focus-ctd-trigger appliance="ALWAYS" is_or="false" name="negative_submit - save as draft" negative="false" suppressNewLine="false" triggerType="Test Description">
+<focus-ctd-single-template>
+<focus-ctd-template text="Inputter will not Send for Approval but instead Save as a draft. Validate the Party Role is saved in Draft Status and can be accessed again for further edits."/>
+</focus-ctd-single-template>
+<focus-ctd-cond attribute="Submit" operation="Equals">
+<focus-ctd-cond-val value="save as draft"/>
+</focus-ctd-cond>
+</focus-ctd-trigger>
+</focus-ctd-decoration>
+<focus-ctd-decoration decorationName="DefaultFreeStyleDecoration" decorationType="freeStyle" isActiveDecoration="false"/>
+<focus-ctd-decoration decorationName="DefaultCucumberDecoration" decorationType="cucumberDecoration" isActiveDecoration="false"/>
+<focus-ctd-decoration decorationName="DefaultStructuredDecoration" decorationType="structuredDecoration" isActiveDecoration="true">
+<focus-ctd-trigger appliance="ALWAYS" is_or="false" name="Log_on" negative="false" suppressNewLine="false" triggerType="Test_Steps">
+<focus-ctd-multiple-template>
+<focus-ctd-multiple-template-testSteps>
+<focus-ctd-template text="User logs on to the Fund Utility and navigates to the PARTY ROLE page with the intent to &lt;att_val_desc = User_action&gt;"/>
+</focus-ctd-multiple-template-testSteps>
+<focus-ctd-multiple-template-expectedResults>
+<focus-ctd-template text="User arrives at PARTY ROLE landing page"/>
+</focus-ctd-multiple-template-expectedResults>
+</focus-ctd-multiple-template>
+<focus-ctd-cond attribute="User_action" operation="Equals">
+<focus-ctd-cond-val value="create new"/>
+</focus-ctd-cond>
+</focus-ctd-trigger>
+<focus-ctd-trigger appliance="ALWAYS" is_or="false" name="Fund_link_path" negative="false" suppressNewLine="false" triggerType="Test_Steps">
+<focus-ctd-multiple-template>
+<focus-ctd-multiple-template-testSteps>
+<focus-ctd-template text="User logs on to the Fund Utility and navigates to the &lt;att_name = Fund_Type&gt; page with the intent to &lt;att_val_desc = User_action&gt;"/>
+<focus-ctd-template text="User clicks &quot;CREATE NEW FUND&quot;"/>
+<focus-ctd-template text="User links the relevant party (&lt;att_name = Party_Type&gt;) to the new &lt;att_name = Fund_Type&gt;"/>
+</focus-ctd-multiple-template-testSteps>
+<focus-ctd-multiple-template-expectedResults>
+<focus-ctd-template text="User arrives at &lt;att_name = Fund_Type&gt; landing page"/>
+<focus-ctd-template text="Blank fund creations fields (e.g., Fund Entity) are displayed to the user. "/>
+<focus-ctd-template text="The party is linked to the new &lt;att_name = Fund_Type&gt;"/>
+</focus-ctd-multiple-template-expectedResults>
+</focus-ctd-multiple-template>
+<focus-ctd-cond attribute="User_action" operation="Equals">
+<focus-ctd-cond-val value="link new party to a Fund setup"/>
+<focus-ctd-cond-val value="link new party to an Umbrella fund setup"/>
+</focus-ctd-cond>
+</focus-ctd-trigger>
+<focus-ctd-trigger appliance="ALWAYS" is_or="false" name="Preq" negative="false" suppressNewLine="false" triggerType="Preconditions">
+<focus-ctd-single-template>
+<focus-ctd-template text="Onboarding Specialist logs on to the system with correct username and password and navigates to the Party Role tab of the landing page&#10;User wants to &lt;att_val_desc = User_action&gt; and is working with a &lt;att_name = Party_Type&gt;"/>
+</focus-ctd-single-template>
+<focus-ctd-cond attribute="User_action" operation="Equals">
+<focus-ctd-cond-val value="create new"/>
+</focus-ctd-cond>
+</focus-ctd-trigger>
+<focus-ctd-trigger appliance="ALWAYS" is_or="false" name="Preq_fund" negative="false" suppressNewLine="false" triggerType="Preconditions">
+<focus-ctd-single-template>
+<focus-ctd-template text="Onboarding Specialist logs on to the system with correct username and password and navigates to the &lt;att_name = Fund_Type&gt; tab of the landing page&#10;User will be linking a recently created party (&lt;att_name = Party_Type&gt;) to a new &lt;att_name = Fund_Type&gt; setup"/>
+</focus-ctd-single-template>
+<focus-ctd-cond attribute="User_action" operation="Equals">
+<focus-ctd-cond-val value="link new party to a Fund setup"/>
+<focus-ctd-cond-val value="link new party to an Umbrella fund setup"/>
+</focus-ctd-cond>
+</focus-ctd-trigger>
+<focus-ctd-trigger appliance="ALWAYS" is_or="false" name="Preq_Promoter_Type" negative="false" suppressNewLine="false" triggerType="Preconditions">
+<focus-ctd-single-template>
+<focus-ctd-template text="Specifically a &lt;att_name = Promoter_Type&gt;"/>
+</focus-ctd-single-template>
+<focus-ctd-cond attribute="Party_Type" operation="Equals">
+<focus-ctd-cond-val value="Promoter"/>
+</focus-ctd-cond>
+</focus-ctd-trigger>
+<focus-ctd-trigger appliance="ALWAYS" is_or="false" name="Preq_Continued" negative="false" suppressNewLine="false" triggerType="Preconditions">
+<focus-ctd-single-template>
+<focus-ctd-template text="This party is &lt;att_name = Jurisdiction&gt;-based"/>
+</focus-ctd-single-template>
+</focus-ctd-trigger>
+<focus-ctd-trigger appliance="ALWAYS" is_or="false" name="Create_New" negative="false" suppressNewLine="false" triggerType="Test_Steps">
+<focus-ctd-multiple-template>
+<focus-ctd-multiple-template-testSteps>
+<focus-ctd-template text="User go to &quot;Action Button &quot; and click on &quot;Create New Party Role&quot;"/>
+<focus-ctd-template text="User select the Party Entity &lt;att_name = Party_Entity&gt;"/>
+<focus-ctd-template text="User select  &lt;att_name = service_lines&gt; from Service line DropDown."/>
+<focus-ctd-template text="User select  &lt;att_name = Party_Type&gt; from Party entity DropDown."/>
+<focus-ctd-template text="User inputs the Core Information for the new party"/>
+<focus-ctd-template text="User proceeds to input the Party Address information"/>
+<focus-ctd-template text="User selects &lt;att_name = Jurisdiction&gt; from Country Name Dropdown"/>
+<focus-ctd-template text="Then user Click on Create Button."/>
+</focus-ctd-multiple-template-testSteps>
+<focus-ctd-multiple-template-expectedResults>
+<focus-ctd-template text="User  is on Party Role Page"/>
+<focus-ctd-template text="Use is able to select &lt;att_name = Party_Entity&gt;"/>
+<focus-ctd-template text="&quot;&lt;att_name = service_lines&gt;&quot; display in the  service lines field. "/>
+<focus-ctd-template text="&quot;&lt;att_name = Party_Type&gt;&quot; display in the  Party Role field. "/>
+<focus-ctd-template text="User &lt;att_val_desc = Core_Information&gt;"/>
+<focus-ctd-template text="User &lt;att_val_desc = Party_Address&gt;"/>
+<focus-ctd-template text="&lt;att_name = Jurisdiction&gt; is display in  the Country Name field."/>
+<focus-ctd-template text="user is able to Create the Party role sucessful."/>
+</focus-ctd-multiple-template-expectedResults>
+</focus-ctd-multiple-template>
+<focus-ctd-cond attribute="User_action" operation="Equals">
+<focus-ctd-cond-val value="create new"/>
+</focus-ctd-cond>
+</focus-ctd-trigger>
+<focus-ctd-trigger appliance="ALWAYS" is_or="false" name="update and resubmit a draft Party Role1_1" negative="false" suppressNewLine="false" triggerType="Test_Steps">
+<focus-ctd-multiple-template>
+<focus-ctd-multiple-template-testSteps>
+<focus-ctd-template text="User go to Party role Landing Page and serch with Status &quot;draft&quot;"/>
+<focus-ctd-template text="User select one Party Role which is on  Draft and  click on the Party ID Link"/>
+<focus-ctd-template text="User edit the party role Type to &lt;att_name = Party_Type&gt;, "/>
+<focus-ctd-template text="User update  the Core Information for the Draft party "/>
+<focus-ctd-template text="User proceeds to updating  the Party Address information"/>
+<focus-ctd-template text="User update  &lt;att_name = Jurisdiction&gt; Country name from  the dropdown "/>
+</focus-ctd-multiple-template-testSteps>
+<focus-ctd-multiple-template-expectedResults>
+<focus-ctd-template text="User  is on Party Role Page and The search results for the &quot;Draft &quot; load on the screen"/>
+<focus-ctd-template text="Use is navigated to the Party Role page."/>
+<focus-ctd-template text="&quot;&lt;att_name = Party_Type&gt;&quot;  reflects in  the Party Role Type."/>
+<focus-ctd-template text="User &lt;att_val_desc = Core_Information&gt;"/>
+<focus-ctd-template text="User &lt;att_val_desc = Party_Address&gt;"/>
+<focus-ctd-template text="&lt;att_name = Jurisdiction&gt; is display in the Country Name field&#10;"/>
+</focus-ctd-multiple-template-expectedResults>
+</focus-ctd-multiple-template>
+<focus-ctd-cond attribute="User_action" operation="Equals">
+<focus-ctd-cond-val value="saved draft"/>
+</focus-ctd-cond>
+</focus-ctd-trigger>
+<focus-ctd-trigger appliance="ALWAYS" is_or="false" name="update and resubmit a rejected Party Role1" negative="false" suppressNewLine="false" triggerType="Test_Steps">
+<focus-ctd-multiple-template>
+<focus-ctd-multiple-template-testSteps>
+<focus-ctd-template text="User go to Party role Landing Page and serch with Status &quot;Rejected&quot;"/>
+<focus-ctd-template text="User select one Party Role which is on  rejected and  click on the Party ID Link"/>
+<focus-ctd-template text="User edit the party role Type to &lt;att_name = Party_Type&gt;, "/>
+<focus-ctd-template text="User update  the Core Information for the rejected party "/>
+<focus-ctd-template text="User proceeds to updating  the Party Address information"/>
+<focus-ctd-template text="User update  &lt;att_name = Jurisdiction&gt; Country name from  the dropdown "/>
+</focus-ctd-multiple-template-testSteps>
+<focus-ctd-multiple-template-expectedResults>
+<focus-ctd-template text="User  is on Party Role Page and The search results for the &quot;Rejected &quot; load on the screen"/>
+<focus-ctd-template text="Use is navigated to the Party Role page."/>
+<focus-ctd-template text="&quot;&lt;att_name = Party_Type&gt;&quot;  reflects in  the Party Role Type."/>
+<focus-ctd-template text="User &lt;att_val_desc = Core_Information&gt;"/>
+<focus-ctd-template text="User &lt;att_val_desc = Party_Address&gt;"/>
+<focus-ctd-template text="&lt;att_name = Jurisdiction&gt; is display in the Country Name field&#10;"/>
+</focus-ctd-multiple-template-expectedResults>
+</focus-ctd-multiple-template>
+<focus-ctd-cond attribute="User_action" operation="Equals">
+<focus-ctd-cond-val value="update and resubmit a rejected Party Role"/>
+</focus-ctd-cond>
+</focus-ctd-trigger>
+<focus-ctd-trigger appliance="ALWAYS" is_or="false" name="Company_Env_and _Box_Group" negative="false" suppressNewLine="false" triggerType="Test_Steps">
+<focus-ctd-multiple-template>
+<focus-ctd-multiple-template-testSteps>
+<focus-ctd-template text="User Need to Enter the data &quot;Company Environment and Box Group&quot;"/>
+</focus-ctd-multiple-template-testSteps>
+<focus-ctd-multiple-template-expectedResults>
+<focus-ctd-template text=" User Enter &quot;Company Environment&quot;"/>
+</focus-ctd-multiple-template-expectedResults>
+</focus-ctd-multiple-template>
+<focus-ctd-cond attribute="Fund_Type" operation="Equals">
+<focus-ctd-cond-val value="Product"/>
+</focus-ctd-cond>
+<focus-ctd-cond attribute="service_lines" operation="Equals">
+<focus-ctd-cond-val value="TA  Onshore"/>
+</focus-ctd-cond>
+<focus-ctd-cond attribute="Party_Type" operation="Equals">
+<focus-ctd-cond-val value="Management Company"/>
+</focus-ctd-cond>
+</focus-ctd-trigger>
+<focus-ctd-trigger appliance="ALWAYS" is_or="false" name="Fund_info" negative="false" suppressNewLine="false" triggerType="Test_Steps">
+<focus-ctd-multiple-template>
+<focus-ctd-multiple-template-testSteps>
+<focus-ctd-template text="User proceeds to input the remainder of the new &lt;att_name = Fund_Type&gt; information"/>
+</focus-ctd-multiple-template-testSteps>
+<focus-ctd-multiple-template-expectedResults>
+<focus-ctd-template text="User completes new &lt;att_name = Fund_Type&gt;"/>
+</focus-ctd-multiple-template-expectedResults>
+</focus-ctd-multiple-template>
+<focus-ctd-cond attribute="User_action" operation="Equals">
+<focus-ctd-cond-val value="link new party to a Fund setup"/>
+<focus-ctd-cond-val value="link new party to an Umbrella fund setup"/>
+</focus-ctd-cond>
+</focus-ctd-trigger>
+<focus-ctd-trigger appliance="ALWAYS" is_or="false" name="Box" negative="false" suppressNewLine="false" triggerType="Test_Steps">
+<focus-ctd-multiple-template>
+<focus-ctd-multiple-template-testSteps>
+<focus-ctd-template text="User Need to Enter the &quot; Company Environment And Box Groups&quot; "/>
+</focus-ctd-multiple-template-testSteps>
+<focus-ctd-multiple-template-expectedResults>
+<focus-ctd-template text="User Entered the details for the   Company Environment And Box Groups&quot; &#10;"/>
+</focus-ctd-multiple-template-expectedResults>
+</focus-ctd-multiple-template>
+<focus-ctd-cond attribute="Party_Type" operation="Equals">
+<focus-ctd-cond-val value="Management Company"/>
+<focus-ctd-cond-val value="External Product Provider"/>
+<focus-ctd-cond-val value="Plan Manager"/>
+<focus-ctd-cond-val value="Product Administrator"/>
+</focus-ctd-cond>
+</focus-ctd-trigger>
+<focus-ctd-trigger appliance="ALWAYS" is_or="false" name="Submit_Greyout" negative="false" suppressNewLine="false" triggerType="Test_Steps">
+<focus-ctd-multiple-template>
+<focus-ctd-multiple-template-testSteps>
+<focus-ctd-template text="&lt;att_val_desc = Submit&gt;"/>
+</focus-ctd-multiple-template-testSteps>
+<focus-ctd-multiple-template-expectedResults>
+<focus-ctd-template text="User is redirected to Landing Page"/>
+</focus-ctd-multiple-template-expectedResults>
+</focus-ctd-multiple-template>
+<focus-ctd-cond attribute="Submit" operation="Equals">
+<focus-ctd-cond-val value="greyed out"/>
+</focus-ctd-cond>
+</focus-ctd-trigger>
+<focus-ctd-trigger appliance="ALWAYS" is_or="false" name="Submit_SAVE" negative="false" suppressNewLine="false" triggerType="Test_Steps">
+<focus-ctd-multiple-template>
+<focus-ctd-multiple-template-testSteps>
+<focus-ctd-template text="User Click on &lt;att_name = Submit&gt; "/>
+</focus-ctd-multiple-template-testSteps>
+<focus-ctd-multiple-template-expectedResults>
+<focus-ctd-template text=" Party role is  sent for Approval &#10;&#10;&#10;&#10;&#10;"/>
+</focus-ctd-multiple-template-expectedResults>
+</focus-ctd-multiple-template>
+<focus-ctd-cond attribute="Submit" operation="Equals">
+<focus-ctd-cond-val value="send for approval"/>
+</focus-ctd-cond>
+</focus-ctd-trigger>
+<focus-ctd-trigger appliance="ALWAYS" is_or="false" name="SAVE_1" negative="false" suppressNewLine="false" triggerType="Test_Steps">
+<focus-ctd-multiple-template>
+<focus-ctd-multiple-template-testSteps>
+<focus-ctd-template text="User Click on &lt;att_name = Submit&gt; "/>
+</focus-ctd-multiple-template-testSteps>
+<focus-ctd-multiple-template-expectedResults>
+<focus-ctd-template text="The party Role  get saved.&#10;&#10;&#10;&#10;&#10;"/>
+</focus-ctd-multiple-template-expectedResults>
+</focus-ctd-multiple-template>
+<focus-ctd-cond attribute="Submit" operation="Equals">
+<focus-ctd-cond-val value="save as draft"/>
+</focus-ctd-cond>
+</focus-ctd-trigger>
+<focus-ctd-trigger appliance="ALWAYS" is_or="false" name="Submit_CANCEL" negative="false" suppressNewLine="false" triggerType="Test_Steps">
+<focus-ctd-multiple-template>
+<focus-ctd-multiple-template-testSteps>
+<focus-ctd-template text="&lt;att_val_desc = Submit&gt;"/>
+</focus-ctd-multiple-template-testSteps>
+<focus-ctd-multiple-template-expectedResults>
+<focus-ctd-template text="Fund Utility disregards any inputs or changes in party information"/>
+</focus-ctd-multiple-template-expectedResults>
+</focus-ctd-multiple-template>
+<focus-ctd-cond attribute="Submit" operation="Equals">
+<focus-ctd-cond-val value="cancel"/>
+</focus-ctd-cond>
+</focus-ctd-trigger>
+<focus-ctd-trigger appliance="ALWAYS" is_or="false" name="review_approver_actions" negative="false" suppressNewLine="false" triggerType="Test_Steps">
+<focus-ctd-multiple-template>
+<focus-ctd-multiple-template-testSteps>
+<focus-ctd-template text=" User Log out and Login to the application as  Approver."/>
+<focus-ctd-template text="User Search the Party Role with&quot; Pending Approval &quot;status in the party Role Tab.  Or &#10; User  should be able to open the Fund Utility and see a pool of Party Roles waiting to be approved on Approver landing page."/>
+<focus-ctd-template text="Approver Click on  the Party Role link"/>
+<focus-ctd-template text="Approver Click On &quot;Approve All &quot; And add the coments , Signature And Click on &quot;Submit Review&quot; Buttoon. and validate the party role status."/>
+<focus-ctd-template text="Approver Search the Same Party role  using Party ID "/>
+<focus-ctd-template text="Click onthe Approved  party Role  Link"/>
+<focus-ctd-template text="Click On Publish Button, and validae the Status."/>
+</focus-ctd-multiple-template-testSteps>
+<focus-ctd-multiple-template-expectedResults>
+<focus-ctd-template text="User Log in to the application as Approver."/>
+<focus-ctd-template text="The search results for the &quot;Approval Pending &quot; load on the screen Or&#10;Pending Approval Data  should display on the approver landing Page.&#10;"/>
+<focus-ctd-template text="User is navigated to the Review page of the Party Role."/>
+<focus-ctd-template text="Status should change to approved"/>
+<focus-ctd-template text="The search results for the &quot;Approved  &quot; load on the screen"/>
+<focus-ctd-template text="Party Role Review Page should display."/>
+<focus-ctd-template text="Party Role should be available in Published State."/>
+</focus-ctd-multiple-template-expectedResults>
+</focus-ctd-multiple-template>
+<focus-ctd-cond attribute="review_approver_actions" operation="Equals">
+<focus-ctd-cond-val value=" Approver  Approve  and Approver Published the Party Role"/>
+</focus-ctd-cond>
+</focus-ctd-trigger>
+<focus-ctd-trigger appliance="ALWAYS" is_or="false" name="review_approver_actions_reject" negative="false" suppressNewLine="false" triggerType="Test_Steps">
+<focus-ctd-multiple-template>
+<focus-ctd-multiple-template-testSteps>
+<focus-ctd-template text="User Log out  and Login to the application as  Approver."/>
+<focus-ctd-template text="User Search the Party Role with&quot; Approval  Pending &quot;status in the party Role Tab."/>
+<focus-ctd-template text="Approver Click on  the Party Role link"/>
+<focus-ctd-template text="Approver Click On &quot;Reject All &quot; And add the comments,Signature And Click on &quot;Submit Review&quot; Button."/>
+<focus-ctd-template text="Approver Search the Same Party Role using Party ID."/>
+<focus-ctd-template text="Validate the Party role should be in a rejected Status and validate the status."/>
+</focus-ctd-multiple-template-testSteps>
+<focus-ctd-multiple-template-expectedResults>
+<focus-ctd-template text="User Log in to the application as Approver."/>
+<focus-ctd-template text="The search results for the &quot;Approval Pending &quot; load on the screen"/>
+<focus-ctd-template text="User is navigated to the Review page of the Party Role."/>
+<focus-ctd-template text="Status should change to Rejected"/>
+<focus-ctd-template text="The search results for the &quot;Rejected  &quot; load on the screen"/>
+<focus-ctd-template text="Party Role is in Rejected State."/>
+</focus-ctd-multiple-template-expectedResults>
+</focus-ctd-multiple-template>
+<focus-ctd-cond attribute="review_approver_actions" operation="Equals">
+<focus-ctd-cond-val value="The Approver rejects the party role and is not published"/>
+</focus-ctd-cond>
+</focus-ctd-trigger>
+<focus-ctd-trigger appliance="ALWAYS" is_or="false" name="approver has created the Party Role" negative="false" suppressNewLine="false" triggerType="Test_Steps">
+<focus-ctd-multiple-template>
+<focus-ctd-multiple-template-testSteps>
+<focus-ctd-template text=" User Log out And Login to the application as  Same Inputer"/>
+<focus-ctd-template text="User Search the Party Role that he has created in &quot; Pending Approval &quot;status in the party Role Tab."/>
+</focus-ctd-multiple-template-testSteps>
+<focus-ctd-multiple-template-expectedResults>
+<focus-ctd-template text="User Log in to the application as Inputer."/>
+<focus-ctd-template text="The user should not able to approve the Fund."/>
+</focus-ctd-multiple-template-expectedResults>
+</focus-ctd-multiple-template>
+<focus-ctd-cond attribute="approval_user" operation="Equals">
+<focus-ctd-cond-val value="approver has created the Party Role"/>
+</focus-ctd-cond>
+</focus-ctd-trigger>
+<focus-ctd-trigger appliance="ALWAYS" is_or="false" name="approve and the party role is published" negative="false" suppressNewLine="false" triggerType="Test_Steps">
+<focus-ctd-multiple-template>
+<focus-ctd-multiple-template-testSteps>
+<focus-ctd-template text=" User Log out and Login to the application as  Approver."/>
+<focus-ctd-template text="User Search the Party Role with&quot; Pending Approval &quot;status in the party Role Tab.  Or &#10; User  should be able to open the Fund Utility and see a pool of Party Roles waiting to be approved on Approver landing page."/>
+<focus-ctd-template text="Approver Click on  the Party Role link"/>
+<focus-ctd-template text="Approver Click On &quot;Approve All &quot; And add the coments , Signature And Click on &quot;Submit Review&quot; Buttoon. and validate the party role status."/>
+<focus-ctd-template text="Log out and Login to the application as  onboarding specialist ."/>
+<focus-ctd-template text="onboarding specialist  Search the Same Party role  using Party ID "/>
+<focus-ctd-template text="Click onthe Approved  party Role  Link"/>
+<focus-ctd-template text="Click On Publish Button, and validae the Status."/>
+</focus-ctd-multiple-template-testSteps>
+<focus-ctd-multiple-template-expectedResults>
+<focus-ctd-template text="User Log in to the application as Approver."/>
+<focus-ctd-template text="The search results for the &quot;Approval Pending &quot; load on the screen Or&#10;Pending Approval Data  should display on the approver landing Page.&#10;"/>
+<focus-ctd-template text="User is navigated to the Review page of the Party Role."/>
+<focus-ctd-template text="Status should change to approved"/>
+<focus-ctd-template text="User Log in to the application as onboarding specialist ."/>
+<focus-ctd-template text="The search results for the Party ID  with status  &quot;Approved  &quot; display  on the screen"/>
+<focus-ctd-template text="Party Role Review Page should display."/>
+<focus-ctd-template text="Party Role should be available in Published State."/>
+</focus-ctd-multiple-template-expectedResults>
+</focus-ctd-multiple-template>
+<focus-ctd-cond attribute="review_approver_actions" operation="Equals">
+<focus-ctd-cond-val value=" Approver Approves and Onboard Specialist  Published the party Role"/>
+</focus-ctd-cond>
+</focus-ctd-trigger>
+</focus-ctd-decoration>
+<deactivates/>
+<attrs-to-delete/>
+<pool_comments/>
+<focus-ctd-model-sync>
+<focus-ctd-model-sync-mult/>
+<focus-ctd-model-sync-na/>
+</focus-ctd-model-sync>
+</focus-model>
